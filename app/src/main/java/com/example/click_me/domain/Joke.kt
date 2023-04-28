@@ -3,7 +3,7 @@ package com.example.click_me.domain
 import com.google.gson.annotations.SerializedName
 
 data class Joke(
-    @SerializedName("category") val category: String,
-    @SerializedName("delivery") val delivery: String,
-    @SerializedName("lang") val lang: String
+    @SerializedName("type") val type: String,
+    @SerializedName("setup") val setup: String,
+    @SerializedName("punchline") val punchline: String
 )

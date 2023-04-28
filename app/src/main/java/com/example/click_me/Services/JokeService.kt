@@ -15,10 +15,8 @@ class JokeService {
     private val gson = Gson()
     private val url = HttpUrl.Builder()
         .scheme("https")
-        .host("v2.jokeapi.dev")
-        .addPathSegment("joke")
-        .addPathSegment("Any")
-        .addQueryParameter("safe-mode", "")
+        .host("official-joke-api.appspot.com")
+        .addPathSegment("random_joke")
         .build()
 
     fun getRandomJoke(callBack: (Joke?) -> Unit) {

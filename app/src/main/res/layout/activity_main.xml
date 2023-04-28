@@ -15,27 +15,37 @@
         tools:context=".MainActivity">
 
         <TextView
-            android:id="@+id/text_view_joke"
+            android:id="@+id/text_view_joke_setup"
             android:layout_width="300dp"
-            android:textAlignment="center"
             android:layout_height="wrap_content"
-            android:text="@{viewModel.jokeData.delivery}"
+            android:text="@{viewModel.jokeData.setup}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Random Joke" />
 
+        <TextView
+            android:id="@+id/text_view_joke_punchLine"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.jokeData.punchline}"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_joke_setup"
+            tools:text="Random Joke" />
+
         <Button
             android:id="@+id/main_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/get_random_joke"
             android:onClick="@{()->viewModel.getRandomJoke()}"
+            android:text="@string/get_random_joke"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_view_joke" />
+            app:layout_constraintTop_toBottomOf="@+id/text_view_joke_punchLine" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

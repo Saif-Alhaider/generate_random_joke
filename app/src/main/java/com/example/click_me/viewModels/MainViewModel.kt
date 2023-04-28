@@ -1,5 +1,6 @@
 package com.example.click_me.viewModels
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -14,6 +15,7 @@ class MainViewModel : ViewModel() {
 
     fun getRandomJoke() {
         repository.getJoke { joke ->
+            Log.i("joke",joke.toString())
             _jokeData.postValue(joke)
         }
     }
