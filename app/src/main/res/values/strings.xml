@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">click_me</string>
+    <string name="get_random_joke">get Random Joke</string>
+</resources>
