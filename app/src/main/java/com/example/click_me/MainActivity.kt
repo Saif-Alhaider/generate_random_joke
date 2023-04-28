@@ -1,7 +1,9 @@
 package com.example.click_me
 
+import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import com.example.click_me.viewModels.MainViewModel
@@ -16,8 +18,13 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
-        viewModel.getRandomJoke()
     }
-
+//    fun loading(isLoading:Boolean){
+//        if (isLoading){
+//            binding.progressBarLayout.visibility = View.VISIBLE
+//        }else{
+//            binding.progressBarLayout.visibility = View.GONE
+//        }
+//    }
 
 }

@@ -10,12 +10,15 @@ import com.example.click_me.domain.Joke
 class MainViewModel : ViewModel() {
     private val repository = Repository()
     private val _jokeData = MutableLiveData<Joke>()
+
+    init {
+        getRandomJoke()
+    }
     val jokeData:LiveData<Joke>
         get() = _jokeData
 
     fun getRandomJoke() {
         repository.getJoke { joke ->
-            Log.i("joke",joke.toString())
             _jokeData.postValue(joke)
         }
     }
